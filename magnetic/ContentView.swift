@@ -9,13 +9,31 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        TabView {
+                AllPostsView()
+                    .tabItem {
+                        Image(systemName: "house")
+                            .padding()
+                    }
+                LeaderboardView()
+                    .tabItem {
+                        Image(systemName: "medal")
+                    }
+
+            }
+
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
+    static let postListVM: PostListViewModel = {
+        let postListVM = PostListViewModel()
+        postListVM.posts = subscriptionListPreviewData
+        return postListVM
+    }()
+    
     static var previews: some View {
-        ContentView()
+        AllPostsView()
+            .environmentObject(postListVM)
     }
 }
