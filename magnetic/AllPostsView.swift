@@ -40,6 +40,7 @@ struct AllPostsView: View {
             }
     }
 }
+}
 
 struct AllPostsView_Previews: PreviewProvider {
     static let postListVM: PostListViewModel = {
@@ -53,4 +54,4 @@ struct AllPostsView_Previews: PreviewProvider {
             .environmentObject(postListVM)
     }
 }
-}
+

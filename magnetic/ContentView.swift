@@ -10,15 +10,16 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         TabView {
-                AllPostsView()
-                    .tabItem {
-                        Image(systemName: "house")
-                            .padding()
-                    }
-                LeaderboardView()
-                    .tabItem {
-                        Image(systemName: "medal")
-                    }
+            AllPostsView()
+                .tabItem {
+                    Image(systemName: "house")
+                        .padding()
+                }
+            LeaderboardView()
+                .tabItem {
+                    Image(systemName: "medal.fill")
+                        .padding()
+                }
 
             }
 
@@ -33,7 +34,7 @@ struct ContentView_Previews: PreviewProvider {
     }()
     
     static var previews: some View {
-        AllPostsView()
+        ContentView()
             .environmentObject(postListVM)
     }
 }
