@@ -9,7 +9,6 @@
 import Foundation
 
 final class PostListViewModel: ObservableObject {
-    //published = sends notifications to subscribers whenever value has changed
     @Published var posts: [Post] = []
     
 }

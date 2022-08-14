@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @EnvironmentObject var viewModel: AuthViewModel
+
     
     var body: some View {
         Group {
@@ -18,14 +19,14 @@ struct ContentView: View {
             } else {
                 //have a logged in user
                 TabView {
-                    AllPostsView()
+                    HomeView()
                         .tabItem {
                             Image(systemName: "house")
                                 .padding()
                         }
                     LeaderboardView()
                         .tabItem {
-                            Image(systemName: "medal.fill")
+                            Image(systemName: "star")
                                 .padding()
                         }
 

@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct AllPostsView: View {
+    @EnvironmentObject var viewModel: AuthViewModel
     @EnvironmentObject var postListVM: PostListViewModel
     var body: some View {
         ZStack(alignment: .bottom) {
@@ -40,7 +41,17 @@ struct AllPostsView: View {
 
                         Divider()
                     }
+                    
+                    //MARK: Log Out Button
+                    Button {
+                        viewModel.signOut()
+                    } label: {
+                        Image("Log Out")
+                    }
+
                 }
+                
+                
             }
             
         }
