@@ -36,7 +36,7 @@ struct RegistrationView: View {
             VStack(spacing: 40) {
                 TextField("Email", text: $email)
                 TextField("Full Name", text: $fullname)
-                TextField("Password", text: $password)
+                SecureField("Password", text: $password)
             }
             .padding(.horizontal, 32)
             .padding(.top, 44)

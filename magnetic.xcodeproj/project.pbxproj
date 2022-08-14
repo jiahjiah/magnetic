@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		AF50A7B928A889530008B158 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF50A7B828A889530008B158 /* AuthViewModel.swift */; };
+		AF50A7BC28A8BADD0008B158 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF50A7BB28A8BADD0008B158 /* UserModel.swift */; };
+		AF50A7C028A8C4860008B158 /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF50A7BF28A8C4860008B158 /* PostService.swift */; };
+		AF50A7C228A8C6220008B158 /* UploadPostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF50A7C128A8C6220008B158 /* UploadPostViewModel.swift */; };
 		AFBB673128A851FF006452D4 /* newPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBB673028A851FF006452D4 /* newPostView.swift */; };
 		AFBB673328A852C8006452D4 /* newPostContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBB673228A852C8006452D4 /* newPostContentView.swift */; };
 		AFBB673528A85725006452D4 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBB673428A85725006452D4 /* HomeView.swift */; };
@@ -36,6 +39,9 @@
 
 /* Begin PBXFileReference section */
 		AF50A7B828A889530008B158 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		AF50A7BB28A8BADD0008B158 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		AF50A7BF28A8C4860008B158 /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
+		AF50A7C128A8C6220008B158 /* UploadPostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadPostViewModel.swift; sourceTree = "<group>"; };
 		AFBB673028A851FF006452D4 /* newPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newPostView.swift; sourceTree = "<group>"; };
 		AFBB673228A852C8006452D4 /* newPostContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newPostContentView.swift; sourceTree = "<group>"; };
 		AFBB673428A85725006452D4 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -74,14 +80,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AF50A7BA28A8BAC60008B158 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AFFA4FBE28A82EC000AA7029 /* PostModel.swift */,
+				AF50A7BB28A8BADD0008B158 /* UserModel.swift */,
+				AFFA4FC228A83F6500AA7029 /* PostViewModel.swift */,
+				AF50A7C128A8C6220008B158 /* UploadPostViewModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		AFBB674128A87625006452D4 /* HomePage */ = {
 			isa = PBXGroup;
 			children = (
 				AFBB674228A8765C006452D4 /* Popup */,
-				AFFA4FBE28A82EC000AA7029 /* PostModel.swift */,
 				AFFA4FB828A82C7300AA7029 /* SingularPost.swift */,
 				AFFA4FC028A832AF00AA7029 /* VideoView.swift */,
-				AFFA4FC228A83F6500AA7029 /* PostViewModel.swift */,
 				AFFA4FC428A83FA900AA7029 /* AllPostsView.swift */,
 			);
 			path = HomePage;
@@ -100,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				AFBB674528A87892006452D4 /* UserService.swift */,
+				AF50A7BF28A8C4860008B158 /* PostService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -162,6 +178,7 @@
 				AFFA4FCA28A8476E00AA7029 /* LeaderboardView.swift */,
 				AFBB673428A85725006452D4 /* HomeView.swift */,
 				AFFA4FBC28A82D2E00AA7029 /* Entensions.swift */,
+				AF50A7BA28A8BAC60008B158 /* Models */,
 				AFBB674F28A87E07006452D4 /* Components */,
 				AFBB674728A87918006452D4 /* Authentication */,
 				AFBB674428A8786F006452D4 /* Service */,
@@ -273,10 +290,13 @@
 				AF50A7B928A889530008B158 /* AuthViewModel.swift in Sources */,
 				AFBB674E28A87C0C006452D4 /* RegistrationView.swift in Sources */,
 				AFBB673128A851FF006452D4 /* newPostView.swift in Sources */,
+				AF50A7C228A8C6220008B158 /* UploadPostViewModel.swift in Sources */,
 				AFBB673328A852C8006452D4 /* newPostContentView.swift in Sources */,
 				AFFA4FBF28A82EC000AA7029 /* PostModel.swift in Sources */,
 				AFE84D1B28A8211F004F83C9 /* ContentView.swift in Sources */,
 				AFE84D1928A8211F004F83C9 /* magneticApp.swift in Sources */,
+				AF50A7C028A8C4860008B158 /* PostService.swift in Sources */,
+				AF50A7BC28A8BADD0008B158 /* UserModel.swift in Sources */,
 				AFFA4FBD28A82D2E00AA7029 /* Entensions.swift in Sources */,
 				AFFA4FC528A83FA900AA7029 /* AllPostsView.swift in Sources */,
 				AFFA4FB928A82C7300AA7029 /* SingularPost.swift in Sources */,

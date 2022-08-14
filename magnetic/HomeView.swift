@@ -16,18 +16,13 @@ struct HomeView: View {
             AllPostsView()
             
             Button {
-                withAnimation {
-                    show.toggle()
-                }
+                show.toggle()
             } label: {
                 Image("+ button")
             }
 
-            
-            if show {
-                newPostView(show: $show)
-                    .transition(.move(edge: .bottom))
-                    .zIndex(1)
+            .fullScreenCover(isPresented: $show) {
+                newPostContentView()
             }
         }
         
@@ -35,15 +30,3 @@ struct HomeView: View {
     }
 }
 
-struct HomeView_Previews: PreviewProvider {
-    static let postListVM: PostListViewModel = {
-        let postListVM = PostListViewModel()
-        postListVM.posts = postListPreviewData
-        return postListVM
-    }()
-    
-    static var previews: some View {
-        HomeView()
-            .environmentObject(postListVM)
-    }
-}

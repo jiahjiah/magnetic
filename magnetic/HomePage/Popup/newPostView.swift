@@ -34,24 +34,6 @@ struct newPostView: View {
             .opacity(show ? 1 : 0)
             
             
-            //confirm button
-            Button {
-                postListPreviewData = postListPreviewDataMore
-                withAnimation(.easeOut) {
-                    show.toggle()
-                }
-                
-            } label: {
-                Image(systemName: "checkmark")
-                    .font(.body.bold())
-                    .foregroundColor(.white)
-                    .padding(9)
-                    .background(Color.black)
-                    .mask(Circle())
-            }
-            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottomTrailing)
-            .padding()
-            .opacity(show ? 1 : 0)
 
 
         }

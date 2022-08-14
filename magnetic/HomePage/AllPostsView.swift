@@ -9,7 +9,9 @@ import SwiftUI
 
 struct AllPostsView: View {
     @EnvironmentObject var viewModel: AuthViewModel
-    @EnvironmentObject var postListVM: PostListViewModel
+    @ObservedObject var postListVM = PostListViewModel()
+    
+    
     var body: some View {
         ZStack(alignment: .bottom) {
             ScrollView {
@@ -59,16 +61,16 @@ struct AllPostsView: View {
     }
 }
 
-struct AllPostsView_Previews: PreviewProvider {
-    static let postListVM: PostListViewModel = {
-        let postListVM = PostListViewModel()
-        postListVM.posts = postListPreviewData
-        return postListVM
-    }()
+//struct AllPostsView_Previews: PreviewProvider {
+  //  static let postListVM: PostListViewModel = {
+    //    let postListVM = PostListViewModel()
+        //postListVM.posts = postListPreviewData
+      //  return postListVM
+    //}()
     
-    static var previews: some View {
-        AllPostsView()
-            .environmentObject(postListVM)
-    }
-}
+    //static var previews: some View {
+    //    AllPostsView()
+      //      .environmentObject(postListVM)
+    //}
+//}
 

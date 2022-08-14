@@ -12,14 +12,7 @@ import Firebase
 @main
 struct magneticApp: App {
     
-    @StateObject var viewModel = AuthViewModel()
-
-    @StateObject var postListVM: PostListViewModel = {
-        let postListVM = PostListViewModel()
-        postListVM.posts = postListPreviewData
-        return postListVM
-    }()
-    
+    @StateObject var viewModel = AuthViewModel()    
  
     init() {
         FirebaseApp.configure()
@@ -31,7 +24,6 @@ struct magneticApp: App {
                 ContentView()
             }
             .environmentObject(viewModel)
-            .environmentObject(postListVM)
 
         }
 

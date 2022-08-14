@@ -10,13 +10,14 @@ import Firebase
 
 class AuthViewModel: ObservableObject {
     @Published var userSession: FirebaseAuth.User?
+    @Published var currentUser: User?
+    
+    private let service = UserService()
     
     init() {
         //if user is logged in, store user's session
         self.userSession = Auth.auth().currentUser
-        print("DEBUG: user current seession is \(self.userSession)")
-
-        
+        self.fetchUser()
     }
     
     func login(withEmail email: String, password: String) {
@@ -25,6 +26,10 @@ class AuthViewModel: ObservableObject {
                 print("DEBUG FAILED TO SIGN IN WITH ERROR \(error.localizedDescription)")
                 return
             }
+            
+            guard let user = result?.user else { return }
+            self.userSession = user
+
             
         }
     }
@@ -53,5 +58,14 @@ class AuthViewModel: ObservableObject {
     func signOut() {
         userSession = nil
         try? Auth.auth().signOut()
+    }
+    
+    //explore + own page
+    func fetchUser() {
+        guard let uid = self.userSession?.uid else { return }
+        
+        service.fetchUser(withUid: uid) { user in
+            self.currentUser = user
+        }
     }
 }
