@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF50A7B928A889530008B158 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF50A7B828A889530008B158 /* AuthViewModel.swift */; };
 		AFBB673128A851FF006452D4 /* newPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBB673028A851FF006452D4 /* newPostView.swift */; };
 		AFBB673328A852C8006452D4 /* newPostContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBB673228A852C8006452D4 /* newPostContentView.swift */; };
 		AFBB673528A85725006452D4 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBB673428A85725006452D4 /* HomeView.swift */; };
@@ -34,6 +35,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AF50A7B828A889530008B158 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		AFBB673028A851FF006452D4 /* newPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newPostView.swift; sourceTree = "<group>"; };
 		AFBB673228A852C8006452D4 /* newPostContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newPostContentView.swift; sourceTree = "<group>"; };
 		AFBB673428A85725006452D4 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 		AFBB674928A87BC7006452D4 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				AF50A7B828A889530008B158 /* AuthViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 				AFFA4FBB28A82CC100AA7029 /* PreviewContent.swift in Sources */,
 				AFFA4FC128A832AF00AA7029 /* VideoView.swift in Sources */,
 				AFBB675128A87E2B006452D4 /* RoundedShape.swift in Sources */,
+				AF50A7B928A889530008B158 /* AuthViewModel.swift in Sources */,
 				AFBB674E28A87C0C006452D4 /* RegistrationView.swift in Sources */,
 				AFBB673128A851FF006452D4 /* newPostView.swift in Sources */,
 				AFBB673328A852C8006452D4 /* newPostContentView.swift in Sources */,

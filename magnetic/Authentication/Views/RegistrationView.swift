@@ -12,6 +12,7 @@ struct RegistrationView: View {
     @State private var password = ""
     @State private var fullname = ""
     @Environment(\.presentationMode) var presentationMode
+    @EnvironmentObject var viewModel: AuthViewModel
 
     var body: some View {
         //header
@@ -34,7 +35,7 @@ struct RegistrationView: View {
             //fields
             VStack(spacing: 40) {
                 TextField("Email", text: $email)
-                TextField("Full Name", text: $password)
+                TextField("Full Name", text: $fullname)
                 TextField("Password", text: $password)
             }
             .padding(.horizontal, 32)
@@ -42,7 +43,7 @@ struct RegistrationView: View {
             
             //button
             Button {
-                print("Sign up here...")
+                viewModel.register(withEmail: email, password: password, fullname: fullname)
             } label: {
                 Image("Sign Up")
             }
@@ -52,6 +53,7 @@ struct RegistrationView: View {
             
             Button {
                 presentationMode.wrappedValue.dismiss()
+                //LoginView()
             } label: {
                 HStack {
                     Text("Already have an account?")

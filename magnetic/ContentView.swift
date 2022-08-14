@@ -8,21 +8,34 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var viewModel: AuthViewModel
+    
     var body: some View {
-        TabView {
-            AllPostsView()
-                .tabItem {
-                    Image(systemName: "house")
-                        .padding()
-                }
-            LeaderboardView()
-                .tabItem {
-                    Image(systemName: "medal.fill")
-                        .padding()
-                }
+        Group {
+            //if no user logged in
+            if viewModel.userSession == nil {
+                LoginView()
+            } else {
+                //have a logged in user
+                TabView {
+                    AllPostsView()
+                        .tabItem {
+                            Image(systemName: "house")
+                                .padding()
+                        }
+                    LeaderboardView()
+                        .tabItem {
+                            Image(systemName: "medal.fill")
+                                .padding()
+                        }
+
+                    }
 
             }
-
+            
+        }
+        
+        
     }
 }
 

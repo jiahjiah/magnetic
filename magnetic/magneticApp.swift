@@ -12,14 +12,19 @@ import Firebase
 @main
 struct magneticApp: App {
     
+    @StateObject var viewModel = AuthViewModel()
+ 
     init() {
         FirebaseApp.configure()
     }
     
     var body: some Scene {
         WindowGroup {
-      //      ContentView()
-            LoginView()
+            NavigationView {
+                ContentView()
+            }
+            .environmentObject(viewModel)
         }
+
     }
 }
