@@ -15,6 +15,9 @@
 		AFBB673C28A873A7006452D4 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = AFBB673B28A873A7006452D4 /* FirebaseFirestore */; };
 		AFBB673E28A873A7006452D4 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = AFBB673D28A873A7006452D4 /* FirebaseFirestoreSwift */; };
 		AFBB674028A873A7006452D4 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = AFBB673F28A873A7006452D4 /* FirebaseStorage */; };
+		AFBB674628A87892006452D4 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBB674528A87892006452D4 /* UserService.swift */; };
+		AFBB674C28A87C00006452D4 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBB674B28A87C00006452D4 /* LoginView.swift */; };
+		AFBB674E28A87C0C006452D4 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBB674D28A87C0C006452D4 /* RegistrationView.swift */; };
 		AFE84D1928A8211F004F83C9 /* magneticApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE84D1828A8211F004F83C9 /* magneticApp.swift */; };
 		AFE84D1B28A8211F004F83C9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE84D1A28A8211F004F83C9 /* ContentView.swift */; };
 		AFE84D1D28A82122004F83C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFE84D1C28A82122004F83C9 /* Assets.xcassets */; };
@@ -34,6 +37,9 @@
 		AFBB673228A852C8006452D4 /* newPostContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newPostContentView.swift; sourceTree = "<group>"; };
 		AFBB673428A85725006452D4 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		AFBB673628A86F70006452D4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		AFBB674528A87892006452D4 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		AFBB674B28A87C00006452D4 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		AFBB674D28A87C0C006452D4 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		AFE84D1528A8211F004F83C9 /* magnetic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = magnetic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFE84D1828A8211F004F83C9 /* magneticApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = magneticApp.swift; sourceTree = "<group>"; };
 		AFE84D1A28A8211F004F83C9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -64,6 +70,61 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AFBB674128A87625006452D4 /* HomePage */ = {
+			isa = PBXGroup;
+			children = (
+				AFBB674228A8765C006452D4 /* Popup */,
+				AFFA4FBE28A82EC000AA7029 /* PostModel.swift */,
+				AFFA4FB828A82C7300AA7029 /* SingularPost.swift */,
+				AFFA4FC028A832AF00AA7029 /* VideoView.swift */,
+				AFFA4FC228A83F6500AA7029 /* PostViewModel.swift */,
+				AFFA4FC428A83FA900AA7029 /* AllPostsView.swift */,
+			);
+			path = HomePage;
+			sourceTree = "<group>";
+		};
+		AFBB674228A8765C006452D4 /* Popup */ = {
+			isa = PBXGroup;
+			children = (
+				AFBB673228A852C8006452D4 /* newPostContentView.swift */,
+				AFBB673028A851FF006452D4 /* newPostView.swift */,
+			);
+			path = Popup;
+			sourceTree = "<group>";
+		};
+		AFBB674428A8786F006452D4 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				AFBB674528A87892006452D4 /* UserService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		AFBB674728A87918006452D4 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				AFBB674A28A87BDD006452D4 /* Views */,
+				AFBB674928A87BC7006452D4 /* ViewModel */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		AFBB674928A87BC7006452D4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		AFBB674A28A87BDD006452D4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AFBB674B28A87C00006452D4 /* LoginView.swift */,
+				AFBB674D28A87C0C006452D4 /* RegistrationView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		AFE84D0C28A8211F004F83C9 = {
 			isa = PBXGroup;
 			children = (
@@ -87,14 +148,10 @@
 				AFE84D1A28A8211F004F83C9 /* ContentView.swift */,
 				AFFA4FCA28A8476E00AA7029 /* LeaderboardView.swift */,
 				AFBB673428A85725006452D4 /* HomeView.swift */,
-				AFBB673228A852C8006452D4 /* newPostContentView.swift */,
-				AFBB673028A851FF006452D4 /* newPostView.swift */,
-				AFFA4FC428A83FA900AA7029 /* AllPostsView.swift */,
-				AFFA4FB828A82C7300AA7029 /* SingularPost.swift */,
-				AFFA4FC228A83F6500AA7029 /* PostViewModel.swift */,
-				AFFA4FBE28A82EC000AA7029 /* PostModel.swift */,
-				AFFA4FC028A832AF00AA7029 /* VideoView.swift */,
 				AFFA4FBC28A82D2E00AA7029 /* Entensions.swift */,
+				AFBB674728A87918006452D4 /* Authentication */,
+				AFBB674428A8786F006452D4 /* Service */,
+				AFBB674128A87625006452D4 /* HomePage */,
 				AFE84D1C28A82122004F83C9 /* Assets.xcassets */,
 				AFBB673628A86F70006452D4 /* GoogleService-Info.plist */,
 				AFE84D1E28A82122004F83C9 /* Preview Content */,
@@ -191,11 +248,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFBB674628A87892006452D4 /* UserService.swift in Sources */,
 				AFFA4FCB28A8476E00AA7029 /* LeaderboardView.swift in Sources */,
 				AFFA4FC328A83F6500AA7029 /* PostViewModel.swift in Sources */,
+				AFBB674C28A87C00006452D4 /* LoginView.swift in Sources */,
 				AFBB673528A85725006452D4 /* HomeView.swift in Sources */,
 				AFFA4FBB28A82CC100AA7029 /* PreviewContent.swift in Sources */,
 				AFFA4FC128A832AF00AA7029 /* VideoView.swift in Sources */,
+				AFBB674E28A87C0C006452D4 /* RegistrationView.swift in Sources */,
 				AFBB673128A851FF006452D4 /* newPostView.swift in Sources */,
 				AFBB673328A852C8006452D4 /* newPostContentView.swift in Sources */,
 				AFFA4FBF28A82EC000AA7029 /* PostModel.swift in Sources */,
