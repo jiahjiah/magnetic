@@ -29,7 +29,7 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static let postListVM: PostListViewModel = {
         let postListVM = PostListViewModel()
-        postListVM.posts = subscriptionListPreviewData
+        postListVM.posts = postListPreviewData
         return postListVM
     }()
     

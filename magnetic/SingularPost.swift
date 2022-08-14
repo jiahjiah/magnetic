@@ -5,6 +5,7 @@
 //  Created by HDSB on 2022-08-13.
 //
 
+//what each singular post looks like
 import SwiftUI
 
 struct SingularPost: View {

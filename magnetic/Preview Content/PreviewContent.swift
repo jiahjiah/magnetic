@@ -15,11 +15,11 @@ var postSimra = Post(id: 3, creator: "Simra Khan", videoId: "7fKvJgnoxxI", amoun
 
 var postJaden = Post(id: 4, creator: "Jaden Scali", videoId: "ajNng_1uCRg", amount: 15.99, likes: 231, date: "08/13/22")
 
-var subscriptionListPreviewData: [Post] = [postJaden, postRia, postSimra]
+var postListPreviewData: [Post] = [postJaden, postRia, postSimra]
 
 
 //is added later
 var postJia = Post(id: 1, creator: "Jia Huang", videoId: "oLzF5G8h-c8", amount: 10.99, likes: 100, date: "08/13/22")
 
-var subscriptionListPreviewDataMore: [Post] = [postJaden, postRia, postSimra, postJia]
+var postListPreviewDataMore: [Post] = [postJaden, postRia, postSimra, postJia]
 
