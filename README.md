@@ -1,5 +1,30 @@
-This repo contains a simple Node.js CRUD app that uses the [node-postgres](https://node-postgres.com/) driver to talk to a local CockroachDB cluster.
+# Connect to CockroachDB Serverless using TypeScript and Sequelize
 
-For instructions on starting CockroachDB and running the code, see [this tutorial](https://www.cockroachlabs.com/docs/stable/build-a-nodejs-app-with-cockroachdb.html).
+## How to Run this Code
 
- ./nodejs/node app.js
+To run the code in this folder, first install the node modules defined in `package.json` and `package-lock.json`:
+
+```
+npm install
+```
+
+Next, compile the TypeScript and run using node:
+
+
+```
+tsc && node dist/app.js
+```
+
+This command requires the TypeScript compiler (`tsc`).
+
+You should see the version of CockroachDB that is running on your cluster.
+
+## Setting Up Your Own Project
+
+To setup your own project, install the required modules:
+
+```
+npm i sequelize pg pg-hstore  @types/node @types/pg
+```
+
+This will also add them to your `package.json` and `package-lock.json` files.

@@ -1,9 +1,10 @@
 // To run:
 // npm install
-// node app.js
+// brew install tsc
+// tsc && node dist/app.js
 
 // Import the requirements
-const { Pool, Client } = require('pg')
+import { Sequelize } from 'sequelize';
 
 //
 // CONFIGURATION
@@ -46,14 +47,13 @@ const connectionString = 'postgresql://' + // use the postgresql wire protocol
 
 
 
-const pool = new Pool({
-  connectionString,
-})
+    var sequelize = new Sequelize(connectionString);
 
-//
-// EXECUTE QUERY
-//
-pool.query('SELECT version()', (err, res) => {
-  console.log(err, res)
-  pool.end()
-})
+    (async function(){
+      try {
+        await sequelize.authenticate();
+        console.log('Connection has been established successfully.');
+      } catch (error) {
+        console.error('Unable to connect to the database:', error);
+      }
+    })()
